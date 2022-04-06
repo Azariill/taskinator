@@ -74,6 +74,7 @@ var createTaskEl = function(taskDataObj) {
     default:
       console.log("Something went wrong!");
   }
+//new item
 
   // save task as an object with name, type, status, and id properties then push it into tasks array
   taskDataObj.id = taskIdCounter;
