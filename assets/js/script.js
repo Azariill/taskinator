@@ -55,6 +55,8 @@ var createTaskEl = function(taskDataObj) {
   var taskActionsEl = createTaskActions(taskIdCounter);
   listItemEl.appendChild(taskActionsEl);
 
+  console.log(taskActionsEl);
+
   switch (taskDataObj.status) {
     case "to do":
       taskActionsEl.querySelector("select[name='status-change']").selectedIndex = 0;
@@ -63,6 +65,7 @@ var createTaskEl = function(taskDataObj) {
     case "in progress":
       taskActionsEl.querySelector("select[name='status-change']").selectedIndex = 1;
       tasksInProgressEl.append(listItemEl);
+      console.log(listItemEl);
       break;
     case "completed":
       taskActionsEl.querySelector("select[name='status-change']").selectedIndex = 2;
